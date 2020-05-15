@@ -24,10 +24,10 @@ Things you may want to cover:
 * ...
 
 
-## users テーブル
+## user テーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null;false|
+|name|string|null: false|
 
 ### Association
 - has_many :notes
