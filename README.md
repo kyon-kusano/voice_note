@@ -22,3 +22,23 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+## user テーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+- has_many :notes
+
+
+## note テーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false, index|
+|content|string|null: false|
+|user|references|null: false, foreign_key: true|
+
+### Association
+- belongs_to :user
