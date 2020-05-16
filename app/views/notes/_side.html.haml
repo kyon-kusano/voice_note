@@ -1,0 +1,19 @@
+.side
+  .side__header
+    .side__header__app-name
+      Voice note
+    .side__header__user-name
+      = current_user.name
+    .side__header__icons
+      = link_to new_note_path, class: "icon-plus" do
+        = icon('far','plus-square')
+      %span
+      = link_to edit_user_path(current_user), class: "icon-cog" do
+        = icon('fas','cog')
+  .side__list
+    - current_user.notes.each do |note|
+      .side__list__note
+        = link_to note_path(note.id) do
+          .side__list__note__title
+            = note.title
+    .side__list__search

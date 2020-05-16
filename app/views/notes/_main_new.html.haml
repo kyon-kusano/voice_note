@@ -1,0 +1,13 @@
+.main
+  = form_for @note do |f|
+    .main__header
+      .main__header__title
+        = f.text_field :title, class: 'title'
+      .main__header__btn
+        %button{type: "button", id:'start-btn'} 
+          = "start"
+        %button{type: "button", id:'stop-btn'} 
+          = "stop"
+        = f.submit "save"
+    .main__content
+      = f.text_area :content, class: 'text', placeholder: 'type a message', id: 'content', size: "120x25"
