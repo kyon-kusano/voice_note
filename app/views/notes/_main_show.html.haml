@@ -3,10 +3,10 @@
     .main__header__title
       = @note.title
     .main__header__btn
-      = link_to '#', class: "edit" do
+      = link_to edit_note_path(@note.id), class: "edit" do
         %button{type: "button", id:'edit-btn'} 
           = "edit"
-      = link_to '#', class: "delete" do
+      = link_to note_path(@note.id), method: :delete, class: "delete" do
         %button{type: "button", id:'delete-btn'} 
           = "delete"
   .main__content
