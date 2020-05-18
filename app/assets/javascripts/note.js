@@ -1,24 +1,4 @@
 $(function(){
-  //    function buildHTML(message){
-
-  //    }
-  // $('#new_note').on('submit', function(e){
-  //   e.preventDefault();
-  //   var formData = new FormData(this);
-  //   var url = $(this).attr('action');
-  //   $.ajax8({
-  //     url: url,
-  //     type: "POST",
-  //     data: formData,
-  //     dataType: 'json',
-  //     processData: false,
-  //     contentType: false
-  //   })
-  //     .done(function(data){
-  //       var html = buildHTML(data);
-  //     })
-  // });
-
   const startBtn = document.getElementById('start-btn');
   const stopBtn = document.getElementById('stop-btn');
   const resultDiv = document.getElementById('content');
@@ -46,8 +26,6 @@ $(function(){
     }
     resultDiv.value = finalTranscript + interimTranscript 
   }
- 
-
   startBtn.onclick = () => {
     recognition.start();
   }
