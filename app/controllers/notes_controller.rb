@@ -9,6 +9,10 @@ class NotesController < ApplicationController
   
   def create
     Note.create(note_params)
+    redirect_to new_note_path
+      # respod_to do |format|
+      #   format.json
+      # end
   end
 
   def show

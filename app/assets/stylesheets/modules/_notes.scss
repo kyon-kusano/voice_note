@@ -10,27 +10,70 @@
       &__header{
         height: 100px;
         background-color: black;
-        &__app-name{
-          color: white;
-        }
-        &__user-name{
-          color: white;
-        }
-        &__icons{
-          .icon-plus{
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        &__box{
+          height: 20px;
+          width: 260px;
+          line-height: 20px;
+          display: flex;
+          justify-content: space-between;
+          &__user-name{
             color: white;
+            font-family: serif;
           }
-          .icon-cog{
-            color: white;
+          &__icons{
+            width: 60px;
+            display: flex;
+            text-align: right;
+            &--plus{
+              &:hover{
+                -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+              }
+              .icon-plus{
+              color: white;
+              text-decoration: none;
+              }
+            }
+            &--cog{
+              margin-left: 5px;
+              &:hover{
+                -webkit-transform: translateY(-5px);
+                transform: translateY(-5px);
+              }
+              .icon-cog{
+                color: white;
+                text-decoration: none;
+              }
+            }
           }
         }
       }
       &__list{
         height: calc(100vh - 100px);
         width: 300px;
+        padding: 20px 20px 0;
         &__note{
           width: 260px;
           margin-bottom: 40px;
+          font-family: serif;
+          position: relative;
+          transition: .3s;
+          a::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: #c0c0c0;
+            transition: .3s;
+          }
+          a:hover::after {
+            width: 100%;
+          }
           a {
             text-decoration-line: none;
             .side__list__note__title{
@@ -40,9 +83,6 @@
               color: white;
             }
           }
-        }
-        &__search{
-          
         }
       }      
     }
@@ -55,7 +95,39 @@
         height: 100px;
       }
       &__content{
-
+        padding: 20px 20px 0;
+        &__app-name{
+          font-size: 150px;
+          text-align: center;
+          font-family: serif;
+          animation:sample_anime 3s ease-in-out 1s infinite alternate both;
+          @keyframes sample_anime{
+            0% {
+              color: black;
+            }
+            50% {
+              color: gray;
+            }
+            100% {
+              color: white;
+            }
+          }
+        }
+        &__manual{
+          padding: 50px 100px 0;
+          &__plus{
+            margin-bottom: 10px;
+            .plus-square{
+              margin-right: 5px;
+            }
+          }
+          &__cog{
+            margin-bottom: 10px;
+            .cog{
+              margin-right: 5px;
+            }
+          }
+        }
       }
     }
   }

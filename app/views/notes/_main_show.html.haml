@@ -1,13 +1,15 @@
-.main
-  .main__header
-    .main__header__title
+.show__main
+  .show__main__header
+    .show__main__header__title
       = @note.title
-    .main__header__btn
-      = link_to edit_note_path(@note.id), class: "edit" do
-        %button{type: "button", id:'edit-btn'} 
-          = "edit"
-      = link_to note_path(@note.id), method: :delete, class: "delete" do
-        %button{type: "button", id:'delete-btn'} 
-          = "delete"
-  .main__content
+    .show__main__header__btn
+      .show__main__header__btn--edit
+        = link_to edit_note_path(@note.id), class: "edit" do
+          %button{type: "button", id:'edit-btn'} 
+            = "edit"
+      .show__main__header__btn--delete
+        = link_to note_path(@note.id), method: :delete, class: "delete" do
+          %button{type: "button", id:'delete-btn'} 
+            = "delete"
+  .show__main__content
     = @note.content

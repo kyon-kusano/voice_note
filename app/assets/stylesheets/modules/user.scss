@@ -3,9 +3,9 @@
     width: 980px;
     margin: 60px auto;
     padding: 60px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    background-color: #f5f5f5;
+    // border: 1px solid #ddd;
+    // border-radius: 5px;
 
     .account-page__inner--left, .account-page__inner--right {
       float: left;
@@ -30,7 +30,7 @@
         display: block;
         width: 60px;
         margin-top: 5px;
-        border-bottom: 1px solid #38aef0;
+        border-bottom: 1px solid gray;
       }
     }
 
@@ -43,7 +43,7 @@
     .btn {
       margin-top: 20px;
       color: #fff;
-      background-color: #ccc;
+      background-color: rgb(167, 167, 167);
       font-size: 14px;
     }
   }
@@ -67,6 +67,7 @@
         width: 100%;
         padding: 10px;
         letter-spacing: 1px;
+        outline: 0;
       }
     }
   }
@@ -86,7 +87,7 @@
     float: left;
     margin-top: 20px;
     color: #fff;
-    background-color: #38aef0;
+    background-color: rgb(41, 41, 41);
   }
 
   .field-label {

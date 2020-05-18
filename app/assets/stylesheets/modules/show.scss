@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  .wrapper{
+    display: flex;
+    height: 100Vh;
+    .show__main{
+      width: calc(100% - 300px);
+      height: 100vh;
+      background-color: rgb(224, 224, 224);
+      &__header{
+        height: 100px;
+        background-color: rgb(190, 190, 190);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+        &__title{
+           .title{
+            border-width: 0 0 1px;
+            border-style: solid;
+            border-color: gray;
+            background-color: rgb(190, 190, 190);
+            padding-left: 5px;
+            outline: 0;
+           }
+          }
+        &__btn{
+          display: flex;
+          &--edit{
+            &:hover{
+              -webkit-transform: translateY(-5px);
+              transform: translateY(-5px);
+            }
+            #edit-btn{
+              font-size: 13px;
+              &:active{
+                background: black;
+                color: white;
+                outline: 0;
+                border-radius: 5px;
+              }
+            }
+          }
+          &--delete{
+            &:hover{
+              -webkit-transform: translateY(-5px);
+              transform: translateY(-5px);
+            }
+            #delete-btn{
+              font-size: 13px;
+              margin-left: 5px;
+              &:active{
+                background: black;
+                color: white;
+                outline: 0;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+      &__content{
+          margin: 40px 40px 0;
+      }
+    }
+  }
+}
