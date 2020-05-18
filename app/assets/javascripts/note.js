@@ -1,31 +1,23 @@
 $(function(){
-    // const speech = new webkitSpeechRecognition();
-  // speech.lang = 'ja-JP';
-  // speech.continuous = true;
-  // const start_btn = document.getElementById('start-btn');
-  // const content = document.getElementById('content');
+  //    function buildHTML(message){
 
-
-  // start_btn.addEventListener('click', function() {
-  //     // 音声認識をスタート
-  //     speech.start();
+  //    }
+  // $('#new_note').on('submit', function(e){
+  //   e.preventDefault();
+  //   var formData = new FormData(this);
+  //   var url = $(this).attr('action');
+  //   $.ajax8({
+  //     url: url,
+  //     type: "POST",
+  //     data: formData,
+  //     dataType: 'json',
+  //     processData: false,
+  //     contentType: false
+  //   })
+  //     .done(function(data){
+  //       var html = buildHTML(data);
+  //     })
   // });
-
-  // //音声自動文字起こし機能
-  // speech.onresult = function(e) {
-  //   speech.stop();
-  //   if(e.results[0].isFinal){
-  //       var autotext =  e.results[0][0].transcript
-  //       console.log(e);
-  //       console.log(autotext);
-  //       document.getElementById('content').value = autotext
-  //   }
-  // }  
-
-
-  // speech.onend = () => { 
-  //   speech.start() 
-  // };
 
   const startBtn = document.getElementById('start-btn');
   const stopBtn = document.getElementById('stop-btn');
