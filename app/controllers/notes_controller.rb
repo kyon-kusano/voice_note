@@ -7,12 +7,17 @@ class NotesController < ApplicationController
     @note = Note.new
   end
   
-  def create
-    Note.create(note_params)
-    redirect_to new_note_path
-      # respod_to do |format|
-      #   format.json
-      # end
+	def create
+		@note = Note.new(note_params)
+		if @note.save
+      redirect_to note_path(@note)
+		else
+			flash.now[:alert] = '保存できませんでした'
+      render :new
+    end
+    # Note.create(note_params)
+    # redirect_to new_note_path
+
   end
 
   def show
