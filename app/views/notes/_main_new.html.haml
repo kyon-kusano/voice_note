@@ -1,5 +1,6 @@
 .new__main
   = form_for @note do |f|
+    = render 'layouts/error_messages', model: f.object
     .new__main__header
       .new__main__header__title
         = f.text_field :title, class: 'title',placeholder: "title"
